@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="47dp"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+        <EditText
+            android:id="@+id/tv_keyword"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:gravity="center_horizontal"/>
+        <Button
+            android:id="@+id/btn_get"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="搜索"
+            />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/msg_list_view"
+            android:layout_gravity="center_horizontal"
+            android:divider="@null"
+            android:scrollbars="none"
+            android:layout_alignParentTop="true" />
+    </RelativeLayout>
+    <ViewStub
+        android:id="@+id/activity_loading_stub"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inflatedId="@+id/activity_loading_subTree"
+        android:layout="@layout/common_loading" />
+
+    <ViewStub
+        android:id="@+id/activity_net_error_stub"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inflatedId="@+id/activity_net_error_subTree"
+        android:layout="@layout/common_net_error_layout" />
+
+    <ViewStub
+        android:id="@+id/activity_empty_stub"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inflatedId="@+id/activity_empty_subTree"
+        android:layout="@layout/common_tips_layout" />
+
+
+</LinearLayout>
