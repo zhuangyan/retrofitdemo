@@ -1,4 +1,6 @@
 # retrofitdemo
 演示一下retrofit的用法
+
 LoginApi演示了向服务器post Form参数和post json数据
+
 MailListApi演示了如何在请求头里加入Authorization信息,以及传递Query查询参数
